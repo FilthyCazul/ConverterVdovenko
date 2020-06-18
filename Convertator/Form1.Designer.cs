@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+         #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
         /// Требуемый метод для поддержки конструктора — не изменяйте 
@@ -33,8 +33,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Unput_TBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.FirstCBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TwoCBox = new System.Windows.Forms.ComboBox();
             this.FinalLabel = new System.Windows.Forms.Label();
@@ -42,7 +40,7 @@
             // 
             // Done_Button
             // 
-            this.Done_Button.Location = new System.Drawing.Point(432, 38);
+            this.Done_Button.Location = new System.Drawing.Point(286, 38);
             this.Done_Button.Name = "Done_Button";
             this.Done_Button.Size = new System.Drawing.Size(75, 23);
             this.Done_Button.TabIndex = 0;
@@ -52,7 +50,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(351, 38);
+            this.button2.Location = new System.Drawing.Point(205, 38);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -78,32 +76,10 @@
             this.Unput_TBox.TextChanged += new System.EventHandler(this.UnputTBox_TextChanged);
             this.Unput_TBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UnputTBox_KeyPress);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(219, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "из";
-            // 
-            // FirstCBox
-            // 
-            this.FirstCBox.FormattingEnabled = true;
-            this.FirstCBox.Items.AddRange(new object[] {
-            "Квадратные милиметры",
-            "Квадратные сантиметры",
-            "Квадратные метры",
-            "Квадратные километры"});
-            this.FirstCBox.Location = new System.Drawing.Point(238, 6);
-            this.FirstCBox.Name = "FirstCBox";
-            this.FirstCBox.Size = new System.Drawing.Size(121, 21);
-            this.FirstCBox.TabIndex = 5;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(365, 9);
+            this.label3.Location = new System.Drawing.Point(219, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 6;
@@ -117,7 +93,7 @@
             "Квадратные сантиметры",
             "Квадратные метры",
             "Квадратные километры"});
-            this.TwoCBox.Location = new System.Drawing.Point(384, 6);
+            this.TwoCBox.Location = new System.Drawing.Point(238, 6);
             this.TwoCBox.Name = "TwoCBox";
             this.TwoCBox.Size = new System.Drawing.Size(121, 21);
             this.TwoCBox.TabIndex = 7;
@@ -137,12 +113,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(514, 72);
+            this.ClientSize = new System.Drawing.Size(374, 72);
             this.Controls.Add(this.FinalLabel);
             this.Controls.Add(this.TwoCBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.FirstCBox);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.Unput_TBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -163,8 +137,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Unput_TBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox FirstCBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox TwoCBox;
         private System.Windows.Forms.Label FinalLabel;
