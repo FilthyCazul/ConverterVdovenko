@@ -30,33 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.Done_Button = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Unput_TBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TwoCBox = new System.Windows.Forms.ComboBox();
             this.FinalLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.FirstCBox = new System.Windows.Forms.ComboBox();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Done_Button
             // 
-            this.Done_Button.Location = new System.Drawing.Point(286, 38);
+            this.Done_Button.Location = new System.Drawing.Point(436, 43);
             this.Done_Button.Name = "Done_Button";
             this.Done_Button.Size = new System.Drawing.Size(75, 23);
             this.Done_Button.TabIndex = 0;
             this.Done_Button.Text = "Готово";
             this.Done_Button.UseVisualStyleBackColor = true;
             this.Done_Button.Click += new System.EventHandler(this.DoneButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(205, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Выход";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // label1
             // 
@@ -79,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(219, 9);
+            this.label3.Location = new System.Drawing.Point(371, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 6;
@@ -93,7 +85,7 @@
             "Квадратные сантиметры",
             "Квадратные метры",
             "Квадратные километры"});
-            this.TwoCBox.Location = new System.Drawing.Point(238, 6);
+            this.TwoCBox.Location = new System.Drawing.Point(390, 6);
             this.TwoCBox.Name = "TwoCBox";
             this.TwoCBox.Size = new System.Drawing.Size(121, 21);
             this.TwoCBox.TabIndex = 7;
@@ -103,9 +95,41 @@
             this.FinalLabel.AutoSize = true;
             this.FinalLabel.Location = new System.Drawing.Point(12, 48);
             this.FinalLabel.Name = "FinalLabel";
-            this.FinalLabel.Size = new System.Drawing.Size(37, 13);
+            this.FinalLabel.Size = new System.Drawing.Size(10, 13);
             this.FinalLabel.TabIndex = 8;
-            this.FinalLabel.Text = "Итог: ";
+            this.FinalLabel.Text = " ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(219, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "из";
+            // 
+            // FirstCBox
+            // 
+            this.FirstCBox.FormattingEnabled = true;
+            this.FirstCBox.Items.AddRange(new object[] {
+            "Квадратные милиметры",
+            "Квадратные сантиметры",
+            "Квадратные метры",
+            "Квадратные километры"});
+            this.FirstCBox.Location = new System.Drawing.Point(244, 7);
+            this.FirstCBox.Name = "FirstCBox";
+            this.FirstCBox.Size = new System.Drawing.Size(121, 21);
+            this.FirstCBox.TabIndex = 11;
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(355, 43);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.TabIndex = 12;
+            this.ExitButton.Text = "Выход";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // MainForm
             // 
@@ -113,13 +137,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(374, 72);
+            this.ClientSize = new System.Drawing.Size(527, 72);
+            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.FirstCBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.FinalLabel);
             this.Controls.Add(this.TwoCBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Unput_TBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.Done_Button);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -134,12 +160,14 @@
         #endregion
 
         private System.Windows.Forms.Button Done_Button;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Unput_TBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox TwoCBox;
         private System.Windows.Forms.Label FinalLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox FirstCBox;
+        private System.Windows.Forms.Button ExitButton;
     }
 }
 

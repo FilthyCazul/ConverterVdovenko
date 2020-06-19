@@ -29,22 +29,85 @@ namespace Convertator
             else
                 Done_Button.Enabled = true;
         }
+        private void DoneButton_Click(object sender, EventArgs e)
+        {
+            double itog = Convert.ToDouble(Unput_TBox.Text);
+            #region конвертация милиметров
+            if ((FirstCBox.Text == "Квадратные милиметры") && (TwoCBox.Text == "Квадратные милиметры"))
+            {
+                FinalLabel.Text = itog + " мм в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные милиметры") && (TwoCBox.Text == "Квадратные сантиметры"))
+            {
+                FinalLabel.Text = (itog / 10) + " cм в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные милиметры") && (TwoCBox.Text == "Квадратные метры"))
+            {
+                FinalLabel.Text = (itog / 1000) + " м в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные милиметры") && (TwoCBox.Text == "Квадратные километры"))
+            {
+                FinalLabel.Text = (itog / 1000000) + " км в квадрате";
+            }
+            #endregion
+            #region конвертация сантиметров
+            if ((FirstCBox.Text == "Квадратные сантиметры") && (TwoCBox.Text == "Квадратные милиметры"))
+            {
+                FinalLabel.Text = (itog * 10) + " мм в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные сантиметры") && (TwoCBox.Text == "Квадратные сантиметры"))
+            {
+                FinalLabel.Text = itog + " cм в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные сантиметры") && (TwoCBox.Text == "Квадратные метры"))
+            {
+                FinalLabel.Text = (itog * 100) + " м в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные сантиметры") && (TwoCBox.Text == "Квадратные километры"))
+            {
+                FinalLabel.Text = (itog / 100000) + " км в квадрате";
+            }
+            #endregion
+            #region конвертация метров
+            if ((FirstCBox.Text == "Квадратные метры") && (TwoCBox.Text == "Квадратные милиметры"))
+            {
+                FinalLabel.Text = (itog * 1000) + " мм в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные метры") && (TwoCBox.Text == "Квадратные сантиметры"))
+            {
+                FinalLabel.Text = (itog * 100) + " cм в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные метры") && (TwoCBox.Text == "Квадратные метры"))
+            {
+                FinalLabel.Text = itog + " м в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные метры") && (TwoCBox.Text == "Квадратные километры"))
+            {
+                FinalLabel.Text = (itog / 1000) + " км в квадрате";
+            }
+            #endregion
+            #region конвертация километров
+            if ((FirstCBox.Text == "Квадратные километры") && (TwoCBox.Text == "Квадратные милиметры"))
+            {
+                FinalLabel.Text = (itog * 1000000) + " мм в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные километры") && (TwoCBox.Text == "Квадратные сантиметры"))
+            {
+                FinalLabel.Text = (itog * 100000) + " cм в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные километры") && (TwoCBox.Text == "Квадратные метры"))
+            {
+                FinalLabel.Text = (itog * 1000) + " м в квадрате";
+            }
+            if ((FirstCBox.Text == "Квадратные километры") && (TwoCBox.Text == "Квадратные километры"))
+            {
+                FinalLabel.Text = itog + " км в квадрате";
+            }
+            #endregion
+        }
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-        private void DoneButton_Click(object sender, EventArgs e)
-        {
-            double doubleVariable = Convert.ToDouble(Unput_TBox.Text);
-            double itog = 0;
-            switch (TwoCBox.SelectedIndex)
-            {
-                case 0: itog = doubleVariable * 1; break; // миллиметры
-                case 1: itog = doubleVariable * 10; break; // сантиметры
-                case 2: itog = doubleVariable * 1000; break; // метры
-                case 3: itog = doubleVariable * 1000000; break; // километры
-            }
-            FinalLabel.Text = "Итог: " + itog + "";
         }
     }
 }
